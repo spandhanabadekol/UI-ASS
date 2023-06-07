@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <script>
+        let hobbies = ['playing games','Reading books', 'drawing', 'Singing'];
+
+function displayHobbies() {
+  console.log('Displaying My Hobbies:');
+  console.log(hobbies);
+}
+displayHobbies();
+function addHobby(newHobby) {
+  hobbies = [...hobbies, newHobby];
+  console.log("added hobby to array: ")
+  console.log(newHobby);
+}
+
+function deleteHobby(hobbyToDelete) {
+  const index = hobbies.indexOf(hobbyToDelete);
+  if (index !== -1) {
+    hobbies.splice(index, 1);
+    console.log("Deleted Hobby: ")
+    console.log(hobbies);
+  } else {
+    console.log("given hobby doesn't exist.")
+  }
+}
+
+
+
+addHobby('Reading books'); 
+displayHobbies(); 
+deleteHobby('Singing'); 
+displayHobbies();
+</script>
+    </body>
+</html>
